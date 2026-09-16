@@ -1,4 +1,5 @@
-import { StyleSheet, View, Text, Image } from "react-native";
+import { FontAwesome6 } from "@expo/vector-icons";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 
 export default function Login() {
   return (
@@ -20,7 +21,18 @@ export default function Login() {
         </Text>
 
         <View style={styles.footer}>
-          <Text>Entrar com Discord</Text>
+          <TouchableOpacity style={styles.loginBtn} activeOpacity={0.7}>
+            <View style={styles.iconWrapper}>
+              <FontAwesome6
+                name="discord"
+                size={24}
+                color="white"
+                style={styles.btnIcon}
+              />
+            </View>
+
+            <Text style={styles.btnText}>Entrar com Discord</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -60,7 +72,30 @@ const styles = StyleSheet.create({
     marginBottom: 64,
   },
   footer: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  loginBtn: {
+    flexDirection: "row",
+    backgroundColor: "#E51C44",
     width: "100%",
     alignItems: "center",
+    width: 274,
+    height: 56,
+    borderRadius: 8,
+  },
+  iconWrapper: {
+    width: 56,
+    height: 56,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRightWidth: 1,
+    borderColor: "#991F36",
+  },
+  btnText: {
+    fontSize: 16,
+    marginHorizontal: 28,
+    fontWeight: "bold",
+    color: "#DDE3F0",
   },
 });
