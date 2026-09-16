@@ -24,6 +24,13 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+		["expo-font",
+	{
+	 "fonts": ["node_modules/@expo-google-fonts/rajdhani/700Bold/Rajdhani_700Bold.ttf"]
+	},
+    ]
+		]
   }
 }
