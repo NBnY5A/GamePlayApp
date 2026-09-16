@@ -1,47 +1,48 @@
 import { FontAwesome6 } from "@expo/vector-icons";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
+import Background from "../components/Background";
 
 export default function Login() {
   return (
-    <View style={styles.container}>
-      <Image
-        source={require("../../../assets/Group 24.png")}
-        style={styles.image}
-      />
+    <Background>
+      <View style={styles.container}>
+        <Image
+          source={require("../../../assets/Group 24.png")}
+          style={styles.image}
+        />
 
-      {/* TODO: Corrigir bug visual no meio da tela */}
-      <View style={styles.content}>
-        <Text style={styles.title}>
-          Conecte-se {"\n"}e organize suas {"\n"}
-          jogatinas
-        </Text>
+        <View style={styles.content}>
+          <Text style={styles.title}>
+            Conecte-se {"\n"}e organize suas {"\n"}
+            jogatinas
+          </Text>
 
-        <Text style={styles.subtitle}>
-          Crie grupos para jogar seus games favoritos com os seus amigos
-        </Text>
+          <Text style={styles.subtitle}>
+            Crie grupos para jogar seus games favoritos com os seus amigos
+          </Text>
 
-        <View style={styles.footer}>
-          <TouchableOpacity style={styles.loginBtn} activeOpacity={0.7}>
-            <View style={styles.iconWrapper}>
-              <FontAwesome6
-                name="discord"
-                size={24}
-                color="white"
-                style={styles.btnIcon}
-              />
-            </View>
+          <View style={styles.footer}>
+            <TouchableOpacity style={styles.loginBtn} activeOpacity={0.7}>
+              <View style={styles.iconWrapper}>
+                <FontAwesome6
+                  name="discord"
+                  size={24}
+                  color="white"
+                  style={styles.btnIcon}
+                />
+              </View>
 
-            <Text style={styles.btnText}>Entrar com Discord</Text>
-          </TouchableOpacity>
+              <Text style={styles.btnText}>Entrar com Discord</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
+    </Background>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0A1033",
     alignItems: "center",
     justifyContent: "center",
   },
