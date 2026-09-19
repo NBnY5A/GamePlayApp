@@ -32,10 +32,11 @@
         "expo-font",
         {
           "fonts": [
-						"./assets/fonts/Rajdhani-Regular.ttf"
-					],
+            "./assets/fonts/Rajdhani-Regular.ttf"
+          ]
         }
-      ]
+      ],
+      "expo-status-bar"
     ]
   }
 }
