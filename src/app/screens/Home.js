@@ -59,8 +59,42 @@ export default function Home() {
           <Text style={styles.bodyInfo}>Total 6</Text>
         </View>
 
-        <View>
-          <EventCard />
+        <View style={styles.events}>
+          <EventCard
+            icon={require("../../../assets/Game1.png")}
+            title={"Lendários"}
+            category={"Ranqueada"}
+            date={"18/06 às 21:00h"}
+            user={"Anfitrião"}
+          />
+          <EventCard
+            icon={require("../../../assets/Game2.png")}
+            title={"Yeah, boy"}
+            category={"Diversão"}
+            date={"23/06 às 19:00h"}
+            user={"Visitante"}
+          />
+          <EventCard
+            icon={require("../../../assets/Game3.png")}
+            title={"Rumo ao topo"}
+            category={"1x1"}
+            date={"20/06 às 09:00h"}
+            user={"Anfitrião"}
+          />
+          <EventCard
+            icon={require("../../../assets/Game4.png")}
+            title={"Bora queimar tudo"}
+            category={"Ranqueada"}
+            date={"20/06 às 14:40h"}
+            user={"Anfitrião"}
+          />
+          <EventCard
+            icon={require("../../../assets/Game5.png")}
+            title={"Valorosos"}
+            category={"Ranqueada"}
+            date={"18/06 às 21:00h"}
+            user={"Anfitrião"}
+          />
         </View>
       </SafeAreaView>
     </Background>
@@ -130,5 +164,9 @@ const styles = StyleSheet.create({
   bodyInfo: {
     color: "#DDE3F0",
     fontSize: 13,
+  },
+  events: {
+    flex: 1,
+    gap: 16,
   },
 });
