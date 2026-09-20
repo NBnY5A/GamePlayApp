@@ -3,6 +3,8 @@ import Background from "../components/Background";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
+import Card from "../components/Card";
+import EventCard from "../components/EventCard";
 
 export default function Home() {
   return (
@@ -38,6 +40,28 @@ export default function Home() {
             <Ionicons name="add" size={24} color={"white"} />
           </TouchableOpacity>
         </View>
+
+        <View style={styles.cardsContainer}>
+          <Card icon={require("../../../assets/Icon.png")} text={"Ranqueada"} />
+
+          <Card
+            icon={require("../../../assets/Icon2.png")}
+            text={"Duelo 1x1"}
+          />
+
+          <Card icon={require("../../../assets/Icon1.png")} text={"Diversão"} />
+
+          <Card icon={require("../../../assets/Icon.png")} text={"Diversão"} />
+        </View>
+
+        <View style={styles.bodyContainer}>
+          <Text style={styles.bodyTitle}>Partidas agendadas</Text>
+          <Text style={styles.bodyInfo}>Total 6</Text>
+        </View>
+
+        <View>
+          <EventCard />
+        </View>
       </SafeAreaView>
     </Background>
   );
@@ -52,9 +76,8 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: 24,
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
-    gap: 28,
   },
   gradientBorder: {
     height: 48,
@@ -87,5 +110,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 8,
+  },
+  cardsContainer: {
+    marginTop: 40,
+    flexDirection: "row",
+    gap: 8,
+  },
+  bodyContainer: {
+    flexDirection: "row",
+    marginTop: 40,
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  bodyTitle: {
+    color: "#DDE3f0",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  bodyInfo: {
+    color: "#DDE3F0",
+    fontSize: 13,
   },
 });
