@@ -7,7 +7,7 @@ export default function Splash() {
     <Background>
       <StatusBar style="light" />
       <View style={styles.container}>
-        <Image source={require("../../../assets/Group 18.png")} />
+        <Image source={require("../../assets/Group 18.png")} />
       </View>
     </Background>
   );

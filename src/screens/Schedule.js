@@ -18,6 +18,7 @@ import Card from "../components/Card";
 import { SmallInput } from "../components/SmallInput";
 import { TextArea } from "../components/TextArea";
 import { StatusBar } from "expo-status-bar";
+import { useRouter } from "expo-router";
 
 export default function Schedule() {
   const [day, setDay] = useState("");
@@ -26,6 +27,7 @@ export default function Schedule() {
   const [minute, setMinute] = useState("");
   const [description, setDescription] = useState("");
 
+  const router = useRouter();
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -46,23 +48,23 @@ export default function Schedule() {
             >
               <View style={styles.cardsContainer}>
                 <Card
-                  icon={require("../../../assets/Icon.png")}
+                  icon={require("../../assets/Icon.png")}
                   text={"Ranqueada"}
                   hasCheckbox={true}
                 />
                 <Card
-                  icon={require("../../../assets/Icon2.png")}
+                  icon={require("../../assets/Icon2.png")}
                   text={"Duelo 1x1"}
                   hasCheckbox={true}
                 />
                 <Card
-                  icon={require("../../../assets/Icon1.png")}
+                  icon={require("../../assets/Icon1.png")}
                   text={"Diversão"}
                   hasCheckbox={true}
                 />
 
                 <Card
-                  icon={require("../../../assets/Icon1.png")}
+                  icon={require("../../assets/Icon1.png")}
                   text={"Diversão"}
                   hasCheckbox={true}
                 />
@@ -73,7 +75,7 @@ export default function Schedule() {
           <View style={styles.form}>
             <Touchable onPress={() => {}}>
               <View style={styles.select}>
-                <Image source={require("../../../assets/Game5.png")} />
+                <Image source={require("../../assets/Game5.png")} />
                 <View style={styles.selectBody}>
                   <Text style={styles.label}>Selecione um servidor</Text>
                 </View>
@@ -119,7 +121,11 @@ export default function Schedule() {
             />
 
             <View style={styles.footerContainer}>
-              <TouchableOpacity style={styles.button} activeOpacity={0.8}>
+              <TouchableOpacity
+                style={styles.button}
+                activeOpacity={0.8}
+                onPress={() => router.back()}
+              >
                 <Text style={styles.buttonText}>Agendar</Text>
               </TouchableOpacity>
             </View>

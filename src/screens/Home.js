@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import Card from "../components/Card";
 import EventCard from "../components/EventCard";
 import { StatusBar } from "expo-status-bar";
+import { router } from "expo-router";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
 
           <TouchableOpacity
             style={[styles.btnWrapper, { height: 48, width: 48 }]}
+            onPress={() => router.navigate("/schedule")}
           >
             <Ionicons name="add" size={24} color={"white"} />
           </TouchableOpacity>
@@ -46,25 +48,25 @@ export default function Home() {
 
         <View style={styles.cardsContainer}>
           <Card
-            icon={require("../../../assets/Icon.png")}
+            icon={require("../../assets/Icon.png")}
             text={"Ranqueada"}
             checked={true}
           />
 
           <Card
-            icon={require("../../../assets/Icon2.png")}
+            icon={require("../../assets/Icon2.png")}
             text={"Duelo 1x1"}
             checked={true}
           />
 
           <Card
-            icon={require("../../../assets/Icon1.png")}
+            icon={require("../../assets/Icon1.png")}
             text={"Diversão"}
             checked={true}
           />
 
           <Card
-            icon={require("../../../assets/Icon.png")}
+            icon={require("../../assets/Icon.png")}
             text={"Diversão"}
             checked={true}
           />
@@ -77,35 +79,35 @@ export default function Home() {
 
         <View style={styles.events}>
           <EventCard
-            icon={require("../../../assets/Game1.png")}
+            icon={require("../../assets/Game1.png")}
             title={"Lendários"}
             category={"Ranqueada"}
             date={"18/06 às 21:00h"}
             user={"Anfitrião"}
           />
           <EventCard
-            icon={require("../../../assets/Game2.png")}
+            icon={require("../../assets/Game2.png")}
             title={"Yeah, boy"}
             category={"Diversão"}
             date={"23/06 às 19:00h"}
             user={"Visitante"}
           />
           <EventCard
-            icon={require("../../../assets/Game3.png")}
+            icon={require("../../assets/Game3.png")}
             title={"Rumo ao topo"}
             category={"1x1"}
             date={"20/06 às 09:00h"}
             user={"Anfitrião"}
           />
           <EventCard
-            icon={require("../../../assets/Game4.png")}
+            icon={require("../../assets/Game4.png")}
             title={"Bora queimar tudo"}
             category={"Ranqueada"}
             date={"20/06 às 14:40h"}
             user={"Anfitrião"}
           />
           <EventCard
-            icon={require("../../../assets/Game5.png")}
+            icon={require("../../assets/Game5.png")}
             title={"Valorosos"}
             category={"Ranqueada"}
             date={"18/06 às 21:00h"}

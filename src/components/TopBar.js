@@ -1,13 +1,18 @@
 import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 import { Text, TouchableWithoutFeedback, View } from "react-native";
 import { StyleSheet } from "react-native";
 
 export default function TopBar({ title }) {
+  const router = useRouter();
   return (
     <LinearGradient style={styles.container} colors={["#1D2766", "#171F52"]}>
       <View style={styles.header}>
-        <TouchableWithoutFeedback style={styles.backBtn}>
+        <TouchableWithoutFeedback
+          style={styles.backBtn}
+          onPress={() => router.back()}
+        >
           <AntDesign name="arrow-left" size={24} color={"white"} />
         </TouchableWithoutFeedback>
         <Text style={styles.title}>{title}</Text>

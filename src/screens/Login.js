@@ -2,14 +2,16 @@ import { FontAwesome6 } from "@expo/vector-icons";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Background from "../components/Background";
+import { useRouter } from "expo-router";
 
 export default function Login() {
+  const router = useRouter();
   return (
     <Background>
       <StatusBar style="light" />
       <View style={styles.container}>
         <Image
-          source={require("../../../assets/Group 24.png")}
+          source={require("../../assets/Group 24.png")}
           style={styles.image}
         />
 
@@ -24,7 +26,11 @@ export default function Login() {
           </Text>
 
           <View style={styles.footer}>
-            <TouchableOpacity style={styles.loginBtn} activeOpacity={0.7}>
+            <TouchableOpacity
+              style={styles.loginBtn}
+              activeOpacity={0.7}
+              onPress={() => router.replace("/home")}
+            >
               <View style={styles.iconWrapper}>
                 <FontAwesome6
                   name="discord"
