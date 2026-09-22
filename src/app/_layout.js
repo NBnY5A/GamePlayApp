@@ -1,12 +1,13 @@
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import Home from "./screens/Home";
-import Login from "./screens/Login";
-import Schedule from "./screens/Schedule";
-import Splash from "./screens/Splash";
+import { Stack } from "expo-router";
 
 SplashScreen.preventAutoHideAsync();
+SplashScreen.setOptions({
+  duration: 1000,
+  fade: true,
+});
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
@@ -24,5 +25,11 @@ export default function RootLayout() {
     return null;
   }
 
-  return <Schedule />;
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" />
+      <Stack.Screen name="home" />
+      <Stack.Screen name="schedule" />
+    </Stack>
+  );
 }
