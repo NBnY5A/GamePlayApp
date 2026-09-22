@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   bodyTitle: {
+    fontFamily: "Rajdhani-Bold",
     fontSize: 18,
-    fontWeight: "bold",
     color: "#DDE3F0",
   },
   bodyCategory: {

@@ -38,9 +38,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
+    fontFamily: "Rajdhani-Bold",
     color: "#DDE3F0",
     fontSize: 20,
-    fontWeight: "bold",
     textAlign: "center",
+    marginRight: 16,
   },
 });

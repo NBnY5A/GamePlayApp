@@ -29,7 +29,8 @@ export default function Home() {
 
           <View>
             <Text style={styles.headerText}>
-              Olá, <Text style={{ fontWeight: "bold" }}>Victor</Text>{" "}
+              Olá,{" "}
+              <Text style={{ fontFamily: "Rajdhani-Bold" }}>Victor</Text>{" "}
             </Text>
             <Text style={styles.headerSub}>Hoje é dia de vitória </Text>
           </View>
@@ -144,6 +145,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   headerText: {
+    fontFamily: "Rajdhani-Regular",
     color: "#DDE3F0",
     fontSize: 24,
   },
@@ -170,9 +172,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   bodyTitle: {
+    fontFamily: "Rajdhani-Bold",
     color: "#DDE3f0",
     fontSize: 18,
-    fontWeight: "bold",
   },
   bodyInfo: {
     color: "#DDE3F0",

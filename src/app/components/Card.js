@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     color: "#DDE3F0",
     marginTop: 8,
     fontSize: 15,
-    fontWeight: "bold",
     textAlign: "center",
+    fontFamily: "Rajdhani-Bold",
   },
 });
