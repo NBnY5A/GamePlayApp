@@ -42,16 +42,29 @@ export default function Home() {
         </View>
 
         <View style={styles.cardsContainer}>
-          <Card icon={require("../../../assets/Icon.png")} text={"Ranqueada"} />
+          <Card
+            icon={require("../../../assets/Icon.png")}
+            text={"Ranqueada"}
+            checked={true}
+          />
 
           <Card
             icon={require("../../../assets/Icon2.png")}
             text={"Duelo 1x1"}
+            checked={true}
           />
 
-          <Card icon={require("../../../assets/Icon1.png")} text={"Diversão"} />
+          <Card
+            icon={require("../../../assets/Icon1.png")}
+            text={"Diversão"}
+            checked={true}
+          />
 
-          <Card icon={require("../../../assets/Icon.png")} text={"Diversão"} />
+          <Card
+            icon={require("../../../assets/Icon.png")}
+            text={"Diversão"}
+            checked={true}
+          />
         </View>
 
         <View style={styles.bodyContainer}>
