@@ -17,6 +17,7 @@ import TopBar from "../components/TopBar";
 import Card from "../components/Card";
 import { SmallInput } from "../components/SmallInput";
 import { TextArea } from "../components/TextArea";
+import { StatusBar } from "expo-status-bar";
 
 export default function Schedule() {
   const [day, setDay] = useState("");
@@ -31,6 +32,7 @@ export default function Schedule() {
       style={{ flex: 1 }}
     >
       <Background>
+        <StatusBar style="light" />
         <TopBar title={"Agendar partida"} />
 
         <ScrollView style={styles.container}>

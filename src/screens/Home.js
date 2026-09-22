@@ -5,10 +5,12 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import Card from "../components/Card";
 import EventCard from "../components/EventCard";
+import { StatusBar } from "expo-status-bar";
 
 export default function Home() {
   return (
     <Background>
+      <StatusBar style="light" />
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <LinearGradient

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
 import Schedule from "./screens/Schedule";
+import Splash from "./screens/Splash";
 
 SplashScreen.preventAutoHideAsync();
 

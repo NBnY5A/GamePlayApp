@@ -1,10 +1,12 @@
 import { FontAwesome6 } from "@expo/vector-icons";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import Background from "../components/Background";
 
 export default function Login() {
   return (
     <Background>
+      <StatusBar style="light" />
       <View style={styles.container}>
         <Image
           source={require("../../../assets/Group 24.png")}

@@ -1,9 +1,11 @@
 import { Image, StyleSheet, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import Background from "../components/Background";
 
 export default function Splash() {
   return (
     <Background>
+      <StatusBar style="light" />
       <View style={styles.container}>
         <Image source={require("../../../assets/Group 18.png")} />
       </View>
