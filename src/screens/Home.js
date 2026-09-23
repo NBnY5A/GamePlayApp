@@ -7,6 +7,7 @@ import Card from "../components/Card";
 import EventCard from "../components/EventCard";
 import { StatusBar } from "expo-status-bar";
 import { router } from "expo-router";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function Home() {
   return (
@@ -84,6 +85,7 @@ export default function Home() {
             category={"Ranqueada"}
             date={"18/06 às 21:00h"}
             user={"Anfitrião"}
+            onPress={() => router.push("/details")}
           />
           <EventCard
             icon={require("../../assets/Game2.png")}
@@ -91,6 +93,7 @@ export default function Home() {
             category={"Diversão"}
             date={"23/06 às 19:00h"}
             user={"Visitante"}
+            onPress={() => router.push("/details")}
           />
           <EventCard
             icon={require("../../assets/Game3.png")}
@@ -98,6 +101,7 @@ export default function Home() {
             category={"1x1"}
             date={"20/06 às 09:00h"}
             user={"Anfitrião"}
+            onPress={() => router.push("/details")}
           />
           <EventCard
             icon={require("../../assets/Game4.png")}
@@ -105,6 +109,7 @@ export default function Home() {
             category={"Ranqueada"}
             date={"20/06 às 14:40h"}
             user={"Anfitrião"}
+            onPress={() => router.push("/details")}
           />
           <EventCard
             icon={require("../../assets/Game5.png")}
@@ -112,6 +117,7 @@ export default function Home() {
             category={"Ranqueada"}
             date={"18/06 às 21:00h"}
             user={"Anfitrião"}
+            onPress={() => router.push("/details")}
           />
         </View>
       </SafeAreaView>

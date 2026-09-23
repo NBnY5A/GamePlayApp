@@ -1,9 +1,20 @@
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function EventCard({ icon, title, category, date, user }) {
+export default function EventCard({
+  icon,
+  title,
+  category,
+  date,
+  user,
+  onPress,
+}) {
   return (
-    <View style={styles.cardContainer}>
+    <TouchableOpacity
+      style={styles.cardContainer}
+      activeOpacity={0.7}
+      onPress={onPress}
+    >
       <View style={styles.iconWrapper}>
         <Image source={icon} style={styles.icon} />
       </View>
@@ -39,7 +50,7 @@ export default function EventCard({ icon, title, category, date, user }) {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
