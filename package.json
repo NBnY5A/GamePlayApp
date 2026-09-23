@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/rajdhani": "^0.4.1",
+    "@expo/ngrok": "^4.1.0",
     "@expo/vector-icons": "^15.0.3",
     "expo": "^57.0.24",
     "expo-checkbox": "~57.0.0",

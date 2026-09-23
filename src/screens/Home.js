@@ -49,7 +49,7 @@ export default function Home() {
 
         <View style={styles.cardsContainer}>
           <Card
-            icon={require("../../assets/Icon.png")}
+            icon={require("../../assets/Icon12.png")}
             text={"Ranqueada"}
             checked={true}
           />
@@ -67,7 +67,7 @@ export default function Home() {
           />
 
           <Card
-            icon={require("../../assets/Icon.png")}
+            icon={require("../../assets/Icon12.png")}
             text={"Diversão"}
             checked={true}
           />

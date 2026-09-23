@@ -48,7 +48,7 @@ export default function Schedule() {
             >
               <View style={styles.cardsContainer}>
                 <Card
-                  icon={require("../../assets/Icon.png")}
+                  icon={require("../../assets/Icon12.png")}
                   text={"Ranqueada"}
                   hasCheckbox={true}
                 />
